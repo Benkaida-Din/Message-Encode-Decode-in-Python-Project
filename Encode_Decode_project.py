@@ -1,6 +1,6 @@
 from tkinter import *
 import base64
-
+import tkinter.messagebox as mb
 # Inilize Window
 root= Tk()
 root.geometry("500x300")
@@ -35,7 +35,8 @@ def Mode():
 	elif (mode.get()=="d"):
 		Result.set(Decode(private_key.get(),Text.get()))
 	else:
-		Result.set("Invalid Mode")
+		mb.showinfo(title='Error!!', message='Invalid Mode , please try Agin.')
+		#Result.set("Invalid Mode")
 
 # function to exit window
 def Exit():
